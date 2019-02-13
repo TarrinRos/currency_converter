@@ -58,4 +58,11 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  #
+  VCR.configure do |config|
+    config.cassette_library_dir = __dir__ + '/vcr'
+    config.hook_into :webmock
+    # Do not save secret api key to vcr
+    config.filter_sensitive_data('X-CMC_PRO_API_KEY') { Rails.application.credentials[:coinmarketcap][:api_key] }
+  end
 end
