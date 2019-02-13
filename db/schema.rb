@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_02_13_191703) do
     t.decimal "price_in_usd", precision: 12, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["symbol"], name: "index_currencies_on_symbol", unique: true
   end
 
 end
