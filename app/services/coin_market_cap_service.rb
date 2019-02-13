@@ -13,6 +13,8 @@ class CoinMarketCapService
 
     raise RequestError("Response status was #{response.code}") if response.code != 200
 
-    JSON.parse(response.body)
+    data = JSON.parse(response.body)['data']
+
+    data.first['quote']['USD']['price']
   end
 end
