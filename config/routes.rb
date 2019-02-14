@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
   resources :currencies, only: [:index]
+  resource :conversions, only: [:create]
 end

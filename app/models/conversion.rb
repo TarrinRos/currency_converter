@@ -8,7 +8,17 @@ class Conversion < ApplicationRecord
   before_save :set_currency_prices
 
   def amount_gained
-    from_currency_price_in_usd * amount / to_currency_price_in_usd
+    result = from_currency_price_in_usd * amount / to_currency_price_in_usd
+    result.round(8)
+  end
+
+  def as_json(options)
+    {
+      from_currency_symbol: from_currency.symbol,
+      to_currency_symbol: to_currency.symbol,
+      amount: amount,
+      amount_gained: amount_gained
+    }.as_json(options)
   end
 
   private
