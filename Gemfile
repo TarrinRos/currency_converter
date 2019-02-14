@@ -12,6 +12,7 @@ gem 'puma', '~> 3.11'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'httparty'
+gem 'whenever', require: false
 
 group :development, :test do
   gem 'awesome_rails_console'
