@@ -1,24 +1,23 @@
-# README
+# Cryptocurrency converter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API for matching data from https://coinmarketcap.com and converting cryptocurrencies
 
-Things you may want to cover:
+### Requirements
 
-* Ruby version
+`ruby >= 2.5.0`
 
-* System dependencies
+`rails ~> 5.2.0`
 
-* Configuration
+### Installation & using
 
-* Database creation
+In `terminal` or `cmd`
 
-* Database initialization
+- `$ git clone repository_link`
 
-* How to run the test suite
+- `$ gem install bundler` - if needed
 
-* Services (job queues, cache servers, search engines, etc.)
+- `$ bundle install`
 
-* Deployment instructions
+- `$ rails s` for server starting
 
-* ...
+Then open `http://localhost:3000` at your web-browser
